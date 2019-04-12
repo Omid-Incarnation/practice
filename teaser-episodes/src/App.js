@@ -9,8 +9,6 @@ class App extends Component {
         hashtags: Data[0].hashtags
     }
 
-    
-
     render() {
         const {title, coverImg, description, hashtags} = this.state
         return (
@@ -25,11 +23,20 @@ class App extends Component {
                             <h2>{title}</h2>
                             {description}
                         </div>
-                        <div className="mt-5">
-                            <span className="border border-primary rounded p-2 mr-2 text-primary">#first</span>
-                            <span className="border border-primary rounded p-2 mr-2 text-primary">#second</span>
-                            <span className="border border-primary rounded p-2 mr-2 text-primary">#third</span>
-                        </div>
+                        <ul className="list-unstyled list-inline mt-5 bg-danger">
+                            <li
+                                className="list-inline-item border border-primary rounded px-2 mr-2 my-1  text-primary">
+                                #first
+                            </li>
+                            <li
+                                className="list-inline-item border border-primary rounded px-2 mr-2 my-1 text-primary">
+                                #Second
+                            </li>
+                            <li
+                                className="list-inline-item border border-primary rounded px-2 mr-2 my-1 text-primary">
+                                #Third
+                            </li>
+                        </ul>
                     </div>
                     <div className="col-lg-3 col-md-4 col-sm-12 my-3">
                         <img src={coverImg} className="mx-auto d-block shadow-sm rounded" alt={title}/>
