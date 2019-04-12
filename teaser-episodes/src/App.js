@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import HashtagsBox from "./Components/HashtagsBox"
 import Data from './Components/Data'
 
 class App extends Component {
@@ -23,20 +24,7 @@ class App extends Component {
                             <h2>{title}</h2>
                             {description}
                         </div>
-                        <ul className="list-unstyled list-inline mt-5 bg-danger">
-                            <li
-                                className="list-inline-item border border-primary rounded px-2 mr-2 my-1  text-primary">
-                                #first
-                            </li>
-                            <li
-                                className="list-inline-item border border-primary rounded px-2 mr-2 my-1 text-primary">
-                                #Second
-                            </li>
-                            <li
-                                className="list-inline-item border border-primary rounded px-2 mr-2 my-1 text-primary">
-                                #Third
-                            </li>
-                        </ul>
+                        <HashtagsBox hashtags={hashtags}/>
                     </div>
                     <div className="col-lg-3 col-md-4 col-sm-12 my-3">
                         <img src={coverImg} className="mx-auto d-block shadow-sm rounded" alt={title}/>
